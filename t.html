@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- config -->
+<meta charset="utf-8">
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-itunes-app" content="app-id=976577934">
+<meta name="title" content="Home - IKEA">
+<meta name="description" content=" A world of home furnishings in your phone. Get inspired, create a furniture shopping list, and get directions to your nearest IKEA store."/>
+<!-- libraries -->
+<link rel="stylesheet" href="/irmw-resources/external/jquery.mobile-1.2.0.min.css"/>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- custom stylesheets and scripts -->
+<link rel="stylesheet" href="/irmw-resources/css/ikea.mobile.min.css?v=5.20"/>
+<script type="text/javascript" charset="utf-8" src="/irmw-resources/js/ikea.mobile.min.js?v=5.20"></script>
+<!-- page specifc scripts -->
+<script>
+(function($){
+function loadSettings(){
+//Initialize dynamic configuration.
+$.mobile.retailUnit = 'au';
+$.mobile.languageCode = 'en';
+$.mobile.loadingMessage = "Loading";
+$.mobile.defaultShoppingBagName = "Shopping list";
+$.mobile.offlineLoadError = "The page you tried to go to can\'t be shown right now. You can still view your shopping list.";
+$.mobile.loggedInAsMessage ="Logged in as {1}";
+$.mobile.currencySettings = {symbol: "$", decimalSymbol: ".", positiveFormat: "%s%n", negativeFormat: "-%s%n", groupSymbol: ",", fractionDigits: "2", showFractionDigitsOnInteger: "false", integerSymbol: "", currencyCode: "AUD"};
+$.mobile.showLocalPrices = false;
+$.mobile.baseUrl = '/au/en/';
+$.mobile.isProduction = true;
+$.mobile.cookieDomain = '.ikea.com';
+$.mobile.fullSiteUrl = 'www.ikea.com';
+$.mobile.secureFullSiteUrl = 'secure.ikea.com';
+$.mobile.enableTealium =false;
+}
+loadSettings();
+}(jQuery));
+</script>
+<title id="txtHtmlTitle">Home - IKEA</title>
+<link rel="shortcut icon" type="image/ico" href="/irmw-resources/img/favicon.ico"/>
+<link rel="apple-touch-icon-precomposed" href="/irmw-resources/img/apple-touch-icon-57x57-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/irmw-resources/img/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/irmw-resources/img/apple-touch-icon-144x144-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/irmw-resources/img/apple-touch-icon-32x32-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/irmw-resources/img/apple-touch-icon-57x57-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/irmw-resources/img/apple-touch-icon-72x72-precomposed.png" />
+<!-- For Windows Phone (only 144x144 used)-->
+<meta name="msapplication-TileImage" content="/irmw-resources/img/apple-touch-icon-144x144-precomposed.png" />
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<div data-role="page" data-theme="d" id="mls1447301403492" data-dom-cache="false">
+<div data-role="header" id="ikea-homeheader" data-backbtn="false">
+<div id="ikea-home-topbar">
+<div id="ikea-topbar-logocell">
+<a tabindex="-1" href="/au/en/" rel=external><span class="ikea-logo" title="" ></span></a>
+</div>
+<div id="ikea-topbar-iconcell">
+<div id="search-icon" onClick="$(this).parent().siblings('#ikea-topbar-searchfield').first().searchdecorate('toggle');"></div>
+</div>
+<div data-role="searchdecorate" id="ikea-topbar-searchfield"></div>
+</div>
+<div id="ikea-navbar" data-role="headerbar" data-moreListId="#ikea-more-list">
+<ul>
+<li class="ikea-navbar-item ikea-navbar-item-active"><a href="http://m.ikea.com/au/en/" >Home</a></li>
+<li class="ikea-navbar-item "><a href="http://m.ikea.com/au/en/catalog/functional/" >Products</a></li>
+<li class="ikea-navbar-item "><a href="http://m.ikea.com/au/en/shoppinglist/" rel="nofollow">Shopping lists</a></li>
+<li class="ikea-navbar-item "><a href="http://m.ikea.com/au/en/stores/" >Stores</a></li>
+<li class="ui-headerbar-more-item" data-role="headerbar-more-item"><a data-role="popupbutton" data-popup-content="more-item-popup" ><div class="ikea-navbar-more-image"></div></a></li>
+</ul>
+</div>
+</div>
+<div data-role="popup" id="more-item-popup">
+<ul data-role="listview" data-theme="d" id="ikea-more-list">
+</ul>
+<div data-role="popup-cancel-button">
+<div data-role="button" data-theme="c">Cancel</div>
+</div>
+</div>
+<!-- page content-->
+<script language="JavaScript" type="text/javascript">
+$('#mls1447301403492').bind('pageshow', function(){
+waMLS.initWebAnalyticsStartpage();
+Login.checkLoggedOut();
+});
+</script>
+<div id="loggedOut" style="display:none">
+<div class="ui-body-d ui-corner-all shoppingListNotification">
+<div class="ikea-icon-success shoppingListNotificationIcon"></div>
+<div class="ikea-shoppingListNotificationTextWrapper">
+<div class="ikea-shoppingListNotificationText">You are now logged out.</div>
+</div>
+</div>
+</div>
+<!-- page content-->
+<div class="startpage-vertical-navigation" data-role="content" tabindex="-1">
+<ul data-role="listview" data-theme="d" data-inset="true">
+<li>
+<div class="ikea-campaign" data-role="carousel">
+<div data-role="carouselItem" data-campaignurl="/au/en/campaigns/xQPAv7rlwP/">
+<img src="/ms/en_AU/img/local_store_info/campaigns/2016/Summer/LSP/600x600_IO_KONCIS.jpg" data-role="carouselImage"/>
+</div>
+<div data-role="carouselItem" data-campaignurl="/au/en/campaigns/uxCc3opwUP/">
+<img src="/ms/en_AU/img/local_store_info/campaigns/2016/Summer/LSP/600x600_personlig.jpg" data-role="carouselImage"/>
+</div>
+<div data-role="carouselItem" data-campaignurl="/au/en/campaigns/Gy3dfza0gk/">
+<img src="/ms/en_AU/img/local_store_info/campaigns/2016/Summer/LSP/600x600_family_knives.jpg" data-role="carouselImage"/>
+</div>
+<div data-role="carouselItem" data-campaignurl="/au/en/campaigns/4ApJHZqVqP/">
+<img src="/ms/img/mobile/good-cause-campaign/201622_soft_toys_01_PH129301.jpg" data-role="carouselImage"/>
+<h2 style="background: #FFF; color: #333333;">Designed by kids for a good cause</h2>
+</div>
+</div>
+</li>
+<li><a href="/au/en/campaigns/">All offers & events</a></li>
+</ul>
+<ul data-role="listview" data-theme="d" data-inset="true" class="news-list-start-page">
+<li data-page="http://m.ikea.com/au/en/pages/news/20162_nwvm02a/" class="ikea-independent-page simple-news">
+<div class="media-item start-page">
+<div class="news-image-cont">
+<img class="news-logo" src="http://www.ikea.com/ms/img/logos/new/en_AU/new_60.png">
+<img class="news-image" src="/ms/img/mobile/20162/20162_nwvm02a_01_PH129532.jpg" alt="An eagle costume hanging on a clothes rack and three hula hoops leaned against the wall." />
+</div>
+<h2>LATTJO collection</h2>
+</div>
+</li>
+<li><a href="http://m.ikea.com/au/en/pages/">See all news<span style="color:#CCC;"> (3)</span></a></li>
+</ul>
+<ul data-role="listview" data-theme="d" data-inset="true">
+<li><a href="/au/en/stores/">Find your local store</a></li>
+<li><a href="http://everyday.ikea.com/">Ideas</a></li>
+<li><a href="/au/en/catalog/functional/">Browse our products</a></li>
+<li><a href="/au/en/shoppinglist/">View shopping list</a></li>
+<li><a href="http://onlinecatalogueasia.ikea.com/AU/en/IKEA_Catalogue/">View the IKEA catalogue online</a></li>
+<li><a href="http://m.ikea.com/au/en/pages/customer_service/services/">Customer Service</a></li>
+<li><a href="http://m.ikea.com/au/en/pages/customer_service/tasmania/?icid=au%7Ciba%7Cweek_5%7C12">Delivery to Tasmania</a></li>
+<li><a href="http://m.ikea.com/au/en/pages/customer_service/wollongong/">Delivery to Wollongong</a></li>
+<li><a href="http://m.ikea.com/au/en/pages/customer_service/contact/">Contact us</a></li>
+<li><a href="https://secure.ikea.com/ms/en_AU/secure/family/mobile/index.html">IKEA FAMILY</a></li>
+</ul>
+</div>
+<!-- /page content-->
+<!-- common footer-->
+<div class="ikea-footer-divider"></div>
+<div class="ikea-footer">
+<div>
+Mobile site | <a href="http://www.ikea.com/au/en/?preferedui=desktop" data-location="footer" onClick="return waMLS.appendIRWURL(this)">Full site</a>
+</div>
+<div>
+</div>
+<div>
+<a data-ajax="false" href="http://itunes.apple.com/AU/app/ikea-catalogue/id386592716?mt=8">iPhone/iPad catalogue app</a>
+|
+<a data-ajax="false" href="https://play.google.com/store/apps/details?id=com.ikea.catalogue.android">Android catalogue app</a>
+|
+<a data-ajax="false" href="http://www.ikea.com/au/en/about_ikea/newsroom/product_recalls">Product recalls</a>
+|
+<a data-ajax="false" href="http://www.ikea.com/ms/en_AU/customer_service/policies_and_terms/privacy_policy.html">Privacy policy</a>
+|
+<a data-ajax="false" href="http://www.ikea.com/ms/en_AU/customer_service/policies_and_terms/cookies_policy.html">Cookies policy</a>
+|
+<a data-ajax="false" href="http://m.ikea.com/au/en/pages/customer_service/contact/">Contact us</a>
+</div>
+<div id="footer-login" style="display: none">
+<a href="/au/en/login/" rel="nofollow" data-ajax="false">Log in</a> |
+<a href="/au/en/login/create/" data-ajax="false">Create profile</a>
+</div>
+<div id="footer-logout" style="display: none">
+<span id="logged-in-as"></span> |
+<a style="cursor:pointer;" onclick="Login.logout();return false;" data-ajax="false" rel="nofollow">Log out</a>
+</div>
+<div class="ikea-footer-copyright">
+© Inter IKEA Systems B.V. 1999-2015
+</div>
+</div>
+</div>
+<noscript>
+<div style="display: none;">
+<img src="https://smetrics.ikea.com/b/ss/ikeaallmlsnojavascriptprod/5/?c8=au&amp;v7=au&amp;pageName=nojavascript" alt="" width="5" height="5" />
+</div>
+</noscript>
+</body>
+</html>
+
